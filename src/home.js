@@ -1,8 +1,10 @@
 import './style.css';
+import BgImage from './background.jpg';
 
 export default function home() {
   const home = document.createElement('div');
   home.classList.add('wrapper', 'home');
+  home.style.backgroundImage = `url(${BgImage})`;
 
   const text = document.createElement('p');
   text.innerText = 'Authentic Indonesian Cuisine';

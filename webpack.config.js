@@ -5,10 +5,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    header: './src/header.js',
-    navbar: './src/navbar.js',
-    main: './src/main.js',
-    footer: './src/footer.js',
   },
   devtool: 'inline-source-map',
   plugins: [
