@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="main.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    
+    #content {
+      height: 100%;
+      width: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      font-family: 'Alice', serif;
+      background-color: #fcf9ed;
+    }
+    
+    button {
+      appearance: none;
+      border: 2px solid transparent;
+      background-color: transparent;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+    }
+    
+    header {
+      width: 100%;
+      
+      display: grid;
+      place-items: center;
+      padding: 10px 0 0 0;
+    }
+    
+    header h1, header h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    header h3 {
+      font-family: 'Style Script', cursive;
+      position: relative;
+      top: -10px;
+      right: -25px;
+      margin: 0 0 -30px 0;
+    }
+    
+    nav {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+    
+    nav button {
+      font-size: 1rem;
+    }
+    
+    nav button:hover {
+      border-bottom: 2px solid black;
+      font-weight: bold;
+    }
+    
+    main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      
+    }
+    
+    .wrapper {
+      width: max(70vw, 300px);
+      height: 100%;
+    }
+    
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+      background-image: url('./background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;;
+    }
+    
+    .home p {
+      color: white;
+      font-size: 3rem;
+      text-shadow: black 0 0 20px;
+      text-align: center;
+    }
+    
+    .home button {
+      background-color: white;
+      padding: 10px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    
+    .home button:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    footer {
+      margin: auto 0 0 0;
+      padding: 40px;
+    }
+    
+    .logo {
+      width: 5rem;
+      height: auto;
+    }
+    
+    ul {
+      width: max(300px, 10vw);
+      display: flex;
+    }
+    
+    li {
+      flex: 1;
+      list-style-type: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <header>
+      <img class="logo" src="./logo.png" alt="RR's logo">
+      <h1>Racetha</h1>
+      <h3>Restaurant</h3>
+    </header>
+    <nav>
+      <ul>
+        <li><button>Home</button></li>
+        <li><button>Menu</button></li>
+        <li><button>Contact</button></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="wrapper home">
+        <p>Authentic Indonesian Cuisine</p>
+        <button>View Menu</button>
+      </div>
+    </main>
+    <footer>Created by Thoriq Farras &copy; 2023</footer>
+  </div>
+</body>
+</html>
