@@ -18,6 +18,8 @@
     html, body {
       height: 100vh;
       width: 100vw;
+      background-color: #fcf9ed;
+      overflow-x: hidden;
     }
     
     #content {
@@ -29,7 +31,6 @@
       align-items: center;
       
       font-family: 'Alice', serif;
-      background-color: #fcf9ed;
     }
     
     button {
@@ -145,6 +146,54 @@
       list-style-type: none;
       text-align: center;
     }
+
+    .menu {
+      height: 100%;
+      width: max(50vw, 300px);
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-auto-rows: 300px;
+      gap: 30px;
+      place-content: center;
+
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+
+      border-radius: 20px;
+      box-shadow: 4px 4px 4px 2px gray;
+      transition: scale 100ms ease-in-out;
+    }
+
+    .card:hover {
+      scale: 1.05;
+    }
+
+    .card img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .card .description {
+      background-color: white;
+      flex: 1;
+      
+      margin: -20px 0 0 0;
+      padding: 10px;
+
+      border-radius: 20px;
+    }
+
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+    }
   </style>
 </head>
 <body>
@@ -162,9 +211,39 @@
       </ul>
     </nav>
     <main>
-      <div class="wrapper home">
+      <!-- <div class="wrapper home">
         <p>Authentic Indonesian Cuisine</p>
         <button>View Menu</button>
+      </div> -->
+      <div class="wrapper menu">
+        <div class="card">
+          <img src="./background.jpg" alt="">
+          <div class="description">
+            <h2>Nasi Goreng</h2>
+            <p>Rice freshly fried with sweet soy sauce and served with toppings and sides of your choice.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./gado.jpg" alt="">
+          <div class="description">
+            <h2>Gado Gado</h2>
+            <p>An assortment of vegetables mixed with fried peanut sauce. Usually dubbed as the <em>Indonesian</em> salad.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./rendang.jpg" alt="">
+          <div class="description">
+            <h2>Rendang</h2>
+            <p>The pinnacle of Indonesian cuisine -- selected beef slow-cooked to perfection and sauced in <em>rendang</em> paste.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./kuning.jpg" alt="">
+          <div class="description">
+            <h2>Nasi Kuning</h2>
+            <p>Fragrant yellow rice made with coconut milk and turmeric and served with a variety of sides.</p>
+          </div>
+        </div>
       </div>
     </main>
     <footer>Created by Thoriq Farras &copy; 2023</footer>

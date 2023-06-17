@@ -1,6 +1,8 @@
 import './style.css';
-import Home from './home.js';
-import Logo from './logo.png';
+import Logo from './assets/logo.png';
+import Home from './pages/home.js';
+import Menu from './pages/menu.js';
+import { menu } from './dishes.js';
 
 function App() {
   const content = document.createElement('div');
@@ -71,7 +73,8 @@ function Navbar() {
 function Main() {
   const main = document.createElement('main');
   
-  main.appendChild(Home());
+  // main.appendChild(Home());
+  main.appendChild(Menu(menu));
   
   return main;
 }

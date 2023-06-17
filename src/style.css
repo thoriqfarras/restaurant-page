@@ -11,6 +11,8 @@
 html, body {
   height: 100vh;
   width: 100vw;
+  background-color: #fcf9ed;
+  overflow-x: hidden;
 }
 
 #content {
@@ -22,7 +24,6 @@ html, body {
   align-items: center;
   
   font-family: 'Alice', serif;
-  background-color: #fcf9ed;
 }
 
 button {
@@ -136,4 +137,52 @@ li {
   flex: 1;
   list-style-type: none;
   text-align: center;
+}
+
+.menu {
+  height: 100%;
+  width: max(50vw, 300px);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 30px;
+  place-content: center;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 2px gray;
+  transition: scale 100ms ease-in-out;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card .description {
+  background-color: white;
+  flex: 1;
+  
+  margin: -20px 0 0 0;
+  padding: 10px;
+
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-family: 'Playfair Display', serif;
 }
