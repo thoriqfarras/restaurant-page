@@ -1,6 +1,6 @@
-import ChefImg from './assets/chef.jpeg';
-import ManagerImg from './assets/manager.jpeg';
-import WaiterImg from './assets/waiter.jpeg';
+import ChefImg from './chef.jpeg';
+import ManagerImg from './manager.jpeg';
+import WaiterImg from './waiter.jpeg';
 
 export const contactsData = [
   {

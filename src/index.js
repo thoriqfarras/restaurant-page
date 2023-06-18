@@ -1,8 +1,8 @@
 import './style.css';
-import Logo from './assets/logo.png';
-import Home from './pages/home.js';
-import Menu from './pages/menu.js';
-import Contacts from './pages/contacts.js';
+import Logo from './logo.png';
+import Home from './pages/home/home.js';
+import Menu from './pages/menu/menu.js';
+import Contacts from './pages/contacts/contacts.js';
 
 function App() {
   const content = document.createElement('div');

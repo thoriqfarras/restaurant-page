@@ -1,9 +1,9 @@
-import NasgorImg from './assets/nasgor.jpg';
-import GadoImg from './assets/gado.jpg';
-import RendangImg from './assets/rendang.jpg';
-import NaskunImg from './assets/kuning.jpg';
+import NasgorImg from './nasgor.jpg';
+import GadoImg from './gado.jpg';
+import RendangImg from './rendang.jpg';
+import NaskunImg from './kuning.jpg';
 
-export const menuList = [
+export const menuData = [
   {
     name: 'nasi goreng',
     desc: 'Rice freshly fried with sweet soy sauce and served with toppings and sides of your choice.',

@@ -1,5 +1,5 @@
-import '../style.css';
-import BgImage from '../assets/nasgor.jpg';
+import '../../style.css';
+import BgImage from '../menu/nasgor.jpg';
 
 export default function home() {
   const home = document.createElement('div');

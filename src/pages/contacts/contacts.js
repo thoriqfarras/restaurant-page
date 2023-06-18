@@ -1,5 +1,5 @@
-import '../style.css';
-import { contactsData } from '../contactsData.js';
+import '../../style.css';
+import { contactsData } from './contactsData.js';
 
 export default function Contacts() {
   const contacts = document.createElement('div');
