@@ -1,10 +1,11 @@
 import '../style.css';
+import { menuList } from '../dishes.js';
 
-export default function Menu(dishes) {
+export default function Menu() {
   const menu = document.createElement('div');
   menu.classList.add('wrapper', 'menu');
 
-  dishes.forEach(dish => {
+  menuList.forEach(dish => {
     menu.append(Card(dish));
   });
 

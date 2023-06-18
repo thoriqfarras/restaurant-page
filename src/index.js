@@ -2,21 +2,32 @@ import './style.css';
 import Logo from './assets/logo.png';
 import Home from './pages/home.js';
 import Menu from './pages/menu.js';
-import { menu } from './dishes.js';
 
 function App() {
   const content = document.createElement('div');
   content.setAttribute('id', 'content');
 
-  content.appendChild(Header());
-  content.appendChild(Navbar());
-  content.appendChild(Main());
-  content.appendChild(Footer());
+  const header = Header();
+  const navbar = Navbar();
+  const main = document.createElement('main');
+  const footer = Footer();
+  
+  // set home as initial active page
+  let activePage = Home();
+  
+  content.appendChild(header);
+  content.appendChild(navbar);
+  content.appendChild(main);
+  main.appendChild(activePage);
+  content.appendChild(footer);
+  
+  const navbarBtns = navbar.querySelectorAll('button');
+  navbarBtns.forEach(btn => {
+    pageChangeHandler(btn, main, activePage);
+  });
 
   return content;
 }
-
-document.body.appendChild(App())
 
 function Header() {
   const header = document.createElement('header');
@@ -70,17 +81,23 @@ function Navbar() {
   return nav;
 }
 
-function Main() {
-  const main = document.createElement('main');
-  
-  // main.appendChild(Home());
-  main.appendChild(Menu(menu));
-  
-  return main;
-}
-
 function Footer() {
   const footer = document.createElement('footer');
   footer.innerText = `Created by Thoriq Farras \u00A9 2023`;
   return footer;
 }
+
+function pageChangeHandler(btn, main, activePage) {
+  btn.addEventListener('click', () => {
+    const wrapper = main.querySelector('.wrapper');
+    if (btn.innerText === 'Home' && activePage != Home()) {
+      wrapper.remove();
+      main.appendChild(Home());
+    } else if (btn.innerText === 'Menu' && activePage != Menu()) {
+      wrapper.remove();
+      main.appendChild(Menu());
+    }
+  });
+}
+
+document.body.appendChild(App());
