@@ -11,6 +11,7 @@ export default function home() {
 
   const menuBtn = document.createElement('button');
   menuBtn.innerText = 'View Menu';
+  menuBtn.setAttribute('id', 'view-menu');
 
   home.appendChild(text);
   home.appendChild(menuBtn);
