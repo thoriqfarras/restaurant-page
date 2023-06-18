@@ -2,6 +2,7 @@ import './style.css';
 import Logo from './assets/logo.png';
 import Home from './pages/home.js';
 import Menu from './pages/menu.js';
+import Contacts from './pages/contacts.js';
 
 function App() {
   const content = document.createElement('div');
@@ -14,6 +15,7 @@ function App() {
 
   const home = Home();
   const menu = Menu();
+  const contacts = Contacts();
   
   // set home as initial active page
   let activePage = Home();
@@ -32,6 +34,8 @@ function App() {
         activePage = switchPage(home);
       } else if (btn.innerText === 'Menu' && activePage != menu) {
         activePage = switchPage(menu);
+      } else if (btn.innerText === 'Contact' && activePage != contacts) {
+        activePage = switchPage(contacts);
       }
     });
   });

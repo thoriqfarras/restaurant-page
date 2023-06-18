@@ -136,14 +136,17 @@
       height: auto;
     }
     
-    ul {
+    nav ul {
       width: max(300px, 10vw);
       display: flex;
     }
     
     li {
-      flex: 1;
       list-style-type: none;
+    }
+
+    nav li {
+      flex: 1;
       text-align: center;
     }
 
@@ -156,7 +159,17 @@
       grid-auto-rows: 300px;
       gap: 30px;
       place-content: center;
+    }
 
+    .contact {
+      height: 100%;
+      width: max(50vw, 300px);
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-auto-rows: minmax(300px, 1fr);
+      gap: 30px;
+      place-content: center;
     }
 
     .card {
@@ -211,37 +224,38 @@
       </ul>
     </nav>
     <main>
-      <!-- <div class="wrapper home">
-        <p>Authentic Indonesian Cuisine</p>
-        <button>View Menu</button>
-      </div> -->
-      <div class="wrapper menu">
+      <div class="wrapper contact">
         <div class="card">
-          <img src="./background.jpg" alt="">
+          <img src="./assets/chef.jpeg" alt="">
           <div class="description">
-            <h2>Nasi Goreng</h2>
-            <p>Rice freshly fried with sweet soy sauce and served with toppings and sides of your choice.</p>
+            <h2>Brandon Waluyo</h2>
+            <p>Head Chef</p>
+            <ul>
+              <li>Phone: XXX-XXX</li>
+              <li>Email: email@com</li>
+            </ul>
           </div>
         </div>
         <div class="card">
-          <img src="./gado.jpg" alt="">
+          <img src="./assets/manager.jpeg" alt="">
           <div class="description">
-            <h2>Gado Gado</h2>
-            <p>An assortment of vegetables mixed with fried peanut sauce. Usually dubbed as the <em>Indonesian</em> salad.</p>
+            <h2>Sean Yuwono</h2>
+            <p>Manager</p>
+            <ul>
+              <li>Phone: XXX-XXX</li>
+              <li>Email: email@com</li>
+            </ul>
           </div>
         </div>
         <div class="card">
-          <img src="./rendang.jpg" alt="">
+          <img src="./assets/waiter.jpeg" alt="">
           <div class="description">
-            <h2>Rendang</h2>
-            <p>The pinnacle of Indonesian cuisine -- selected beef slow-cooked to perfection and sauced in <em>rendang</em> paste.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./kuning.jpg" alt="">
-          <div class="description">
-            <h2>Nasi Kuning</h2>
-            <p>Fragrant yellow rice made with coconut milk and turmeric and served with a variety of sides.</p>
+            <h2>Rose Amalia</h2>
+            <p>Waiter</p>
+            <ul>
+              <li>Phone: XXX-XXX</li>
+              <li>Email: email@com</li>
+            </ul>
           </div>
         </div>
       </div>
