@@ -11,7 +11,7 @@ export const contactsData = [
     img: ChefImg,
   },
   {
-    name: "Sean Waluyo",
+    name: "Sean Yuwono",
     role: "Lead Manager",
     phone: "012-345-678",
     email: "totallynotfake@email.com",

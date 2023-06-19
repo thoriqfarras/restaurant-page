@@ -3,7 +3,8 @@ import { menuData } from './menuData.js';
 
 export default function Menu() {
   const menu = document.createElement('div');
-  menu.classList.add('wrapper', 'menu');
+  menu.classList.add('wrapper');
+  menu.id = 'menu';
 
   menuData.forEach(dish => {
     menu.append(Card(dish));

@@ -3,8 +3,9 @@ import BgImage from '../menu/nasgor.jpg';
 
 export default function home() {
   const home = document.createElement('div');
-  home.classList.add('wrapper', 'home');
+  home.classList.add('wrapper');
   home.style.backgroundImage = `url(${BgImage})`;
+  home.id = 'home';
 
   const text = document.createElement('p');
   text.innerText = 'Authentic Indonesian Cuisine';

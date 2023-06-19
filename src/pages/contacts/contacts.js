@@ -3,7 +3,8 @@ import { contactsData } from './contactsData.js';
 
 export default function Contacts() {
   const contacts = document.createElement('div');
-  contacts.classList.add('wrapper', 'contact');
+  contacts.classList.add('wrapper');
+  contacts.id = 'contact';
 
   contactsData.forEach(person => {
     contacts.append(Card(person));

@@ -3,6 +3,7 @@ import Logo from './logo.png';
 import Home from './pages/home/home.js';
 import Menu from './pages/menu/menu.js';
 import Contacts from './pages/contacts/contacts.js';
+import GithubLogo from './github.svg';
 
 function App() {
   const content = document.createElement('div');
@@ -12,14 +13,14 @@ function App() {
   const navbar = Navbar();
   const main = document.createElement('main');
   const footer = Footer();
-
+  
   const home = Home();
   const menu = Menu();
   const contacts = Contacts();
   
   // set home as initial active page
-  let activePage = Home();
-  
+  let activePage = home;
+
   content.appendChild(header);
   content.appendChild(navbar);
   content.appendChild(main);
@@ -27,9 +28,10 @@ function App() {
   content.appendChild(footer);
   
   // page switching
-  const navbarBtns = navbar.querySelectorAll('button');
+  const navbarBtns = navbar.querySelectorAll('a');
   navbarBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (btn.innerText === 'Home' && activePage != home) {
         activePage = switchPage(home);
       } else if (btn.innerText === 'Menu' && activePage != menu) {
@@ -39,7 +41,7 @@ function App() {
       }
     });
   });
-
+  
   main.addEventListener('click', e => {
     if (e.target === main.querySelector('#view-menu')) {
       activePage = switchPage(menu)
@@ -75,23 +77,29 @@ function Navbar() {
   
   for (let i = 0; i < 3; i++) {
     const li = document.createElement('li');
-    const btn = document.createElement('button');
+    const btn = document.createElement('a');
     li.appendChild(btn);
     ul.appendChild(li);
   }
   nav.appendChild(ul);
   
-  const btns = nav.querySelectorAll('button');
+  const btns = nav.querySelectorAll('a');
   btns.forEach((btn, index) => {
     switch (index) {
       case 0:
       btn.innerText = 'Home';
+      btn.id = 'nav-home';
+      btn.href = '#home';
       break;
       case 1:
       btn.innerText = 'Menu';
+      btn.id = 'nav-menu';
+      btn.href = '#menu';
       break;
       case 2:
       btn.innerText = 'Contact';
+      btn.id = 'nav-contact';
+      btn.href = '#contact';
       break;
       default:
       break;
@@ -103,7 +111,21 @@ function Navbar() {
 
 function Footer() {
   const footer = document.createElement('footer');
-  footer.innerText = `Created by Thoriq Farras \u00A9 2023`;
+  
+  const text = document.createElement('p');
+  text.innerText = `Created by Thoriq Farras 2023`;
+  
+  const github = document.createElement('img');
+  github.src = GithubLogo;
+
+  const githubWrapper = document.createElement('a');
+  githubWrapper.href = 'https://github.com/thoriqfarras';
+  githubWrapper.target = '_blank';
+
+  githubWrapper.appendChild(github);
+  footer.appendChild(text);
+  footer.appendChild(githubWrapper);
+
   return footer;
 }
 
